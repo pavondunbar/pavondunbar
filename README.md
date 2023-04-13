@@ -5,4 +5,4 @@
 ![Chainlink](https://img.shields.io/badge/Chainlink-375BD2?style=for-the-badge&logo=Chainlink&logoColor=white)
 ![Ethereum](https://img.shields.io/badge/Ethereum-3C3C3D?style=for-the-badge&logo=Ethereum&logoColor=white)
 
-https://github-profile-trophy.vercel.app/?username=pavondunbar&theme=oldie
+[![trophy](https://github-profile-trophy.vercel.app/?username=pavondunbar)](https://github.com/ryo-ma/github-profile-trophy)
