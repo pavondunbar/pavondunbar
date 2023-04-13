@@ -6,3 +6,5 @@
 ![Ethereum](https://img.shields.io/badge/Ethereum-3C3C3D?style=for-the-badge&logo=Ethereum&logoColor=white)
 
 [![trophy](https://github-profile-trophy.vercel.app/?username=pavondunbar)](https://github.com/ryo-ma/github-profile-trophy)
+
+[![github-readme-twitter](https://github-readme-twitter.gazf.vercel.app/api?id=pavondunbar)](https://github.com/gazf/github-readme-twitter)
