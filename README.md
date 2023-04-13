@@ -7,4 +7,6 @@
 
 [![trophy](https://github-profile-trophy.vercel.app/?username=pavondunbar)](https://github.com/ryo-ma/github-profile-trophy)
 
-[![github-readme-twitter](https://github-readme-twitter.gazf.vercel.app/api?id=pavondunbar)](https://github.com/gazf/github-readme-twitter)
+[![github-readme-twitter](https://github-readme-twitter.gazf.vercel.app/api?id=pavondunbar&layout=wide)](https://github.com/gazf/github-readme-twitter)
+
+
