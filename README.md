@@ -1,1 +1,121 @@
-![Metrics](https://metrics.lecoq.io/pavondunbar?template=classic&base.hireable=true&isocalendar=1&stargazers=1&languages=1&lines=1&stars=1&skyline=1&chess=1&fortune=1&stock=1&activity=1&notable=1&achievements=1&starlists=1&discussions=1&repositories=1&people=1&habits=1&projects=1&introduction=1&tweets=1&base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&base.indepth=false&base.hireable=true&base.skip=false&repositories.batch=100&repositories.forks=false&repositories.affiliations=owner&isocalendar=false&isocalendar.duration=full-year&languages=false&languages.limit=5&languages.threshold=0%25&languages.other=false&languages.colors=github&languages.sections=most-used&languages.indepth=false&languages.analysis.timeout=15&languages.analysis.timeout.repositories=7.5&languages.categories=markup%2C%20programming&languages.recent.categories=markup%2C%20programming&languages.recent.load=300&languages.recent.days=14&stargazers=false&stargazers.charts=true&stargazers.charts.type=chartist&stargazers.worldmap=false&stargazers.worldmap.sample=0&lines=false&lines.sections=base&lines.repositories.limit=4&lines.history.limit=1&stars=false&stars.limit=4&habits=false&habits.from=200&habits.days=14&habits.facts=true&habits.charts=false&habits.charts.type=classic&habits.trim=false&habits.languages.limit=8&habits.languages.threshold=0%25&people=false&people.limit=24&people.identicons=false&people.identicons.hide=false&people.size=28&people.types=followers%2C%20following&people.shuffle=false&repositories=false&repositories.pinned=0&repositories.starred=0&repositories.random=0&repositories.order=featured%2C%20pinned%2C%20starred%2C%20random&discussions=false&discussions.categories=true&discussions.categories.limit=0&starlists=false&starlists.limit=2&starlists.limit.repositories=2&starlists.languages=false&starlists.limit.languages=8&starlists.shuffle.repositories=true&achievements=false&achievements.threshold=C&achievements.secrets=true&achievements.display=detailed&achievements.limit=0&notable=false&notable.from=organization&notable.repositories=false&notable.indepth=false&notable.types=commit&notable.self=false&activity=false&activity.limit=5&activity.load=300&activity.days=14&activity.visibility=all&activity.timestamps=false&activity.filter=all&projects=false&projects.limit=4&projects.descriptions=false&introduction=false&introduction.title=true&skyline=false&skyline.year=2019&skyline.frames=60&skyline.quality=0.5&skyline.compatibility=true&skyline.settings=%7B%0A%20%20%22url%22%3A%20%22https%3A%2F%2Fskyline.github.com%2F%24%7Blogin%7D%2F%24%7Byear%7D%22%2C%0A%20%20%22ready%22%3A%20%22%5B...document.querySelectorAll('span')%5D.map(span%20%3D%3E%20span.innerText).includes('Share%20on%20Twitter')%22%2C%0A%20%20%22wait%22%3A%201%2C%0A%20%20%22hide%22%3A%20%22button%2C%20footer%2C%20a%22%0A%7D%0A&tweets=false&tweets.user=.user.twitter&tweets.attachments=true&tweets.limit=3&chess=false&chess.user=.user.login&chess.animation=%7B%0A%20%20%22size%22%3A%2040%2C%0A%20%20%22delay%22%3A%203%2C%0A%20%20%22duration%22%3A%200.6%0A%7D%0A&fortune=false&stock=false&stock.duration=1d&stock.interval=5m&config.timezone=America%2FLos_Angeles)
+# Visit https://github.com/lowlighter/metrics#-documentation for full reference
+name: Metrics
+on:
+  # Schedule updates (each hour)
+  schedule: [{cron: "0 * * * *"}]
+  # Lines below let you run workflow manually and on each commit
+  workflow_dispatch:
+  push: {branches: ["master", "main"]}
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          # Your GitHub token
+          # The following scopes are required:
+          #  - public_access (default scope)
+          #  - public_repo
+          #  - read:project
+          # The following additional scopes may be required:
+          #  - read:org      (for organization related metrics)
+          #  - read:user     (for user related data)
+          #  - read:packages (for some packages related data)
+          #  - repo          (optional, if you want to include private repositories)
+          token: ${{ secrets.METRICS_TOKEN }}
+
+          # Options
+          user: pavondunbar
+          template: classic
+          base: header, activity, community, repositories, metadata
+          base_hireable: yes
+          config_timezone: America/Los_Angeles
+          plugin_achievements: yes
+          plugin_achievements_display: detailed
+          plugin_achievements_secrets: yes
+          plugin_achievements_threshold: C
+          plugin_activity: yes
+          plugin_activity_days: 14
+          plugin_activity_filter: all
+          plugin_activity_limit: 5
+          plugin_activity_load: 300
+          plugin_activity_visibility: all
+          plugin_chess: yes
+          plugin_chess_animation: {
+  "size": 40,
+  "delay": 3,
+  "duration": 0.6
+}
+
+          plugin_chess_user: .user.login
+          plugin_discussions: yes
+          plugin_discussions_categories: yes
+          plugin_fortune: yes
+          plugin_habits: yes
+          plugin_habits_charts_type: classic
+          plugin_habits_days: 14
+          plugin_habits_facts: yes
+          plugin_habits_from: 200
+          plugin_habits_languages_limit: 8
+          plugin_habits_languages_threshold: 0%
+          plugin_introduction: yes
+          plugin_introduction_title: yes
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+          plugin_languages: yes
+          plugin_languages_analysis_timeout: 15
+          plugin_languages_analysis_timeout_repositories: 7.5
+          plugin_languages_categories: markup, programming
+          plugin_languages_colors: github
+          plugin_languages_limit: 5
+          plugin_languages_recent_categories: markup, programming
+          plugin_languages_recent_days: 14
+          plugin_languages_recent_load: 300
+          plugin_languages_sections: most-used
+          plugin_languages_threshold: 0%
+          plugin_lines: yes
+          plugin_lines_history_limit: 1
+          plugin_lines_repositories_limit: 4
+          plugin_lines_sections: base
+          plugin_notable: yes
+          plugin_notable_from: organization
+          plugin_notable_types: commit
+          plugin_people: yes
+          plugin_people_limit: 24
+          plugin_people_size: 28
+          plugin_people_types: followers, following
+          plugin_projects: yes
+          plugin_projects_limit: 4
+          plugin_repositories: yes
+          plugin_repositories_order: featured, pinned, starred, random
+          plugin_skyline: yes
+          plugin_skyline_compatibility: yes
+          plugin_skyline_frames: 60
+          plugin_skyline_quality: 0.5
+          plugin_skyline_settings: {
+  "url": "https://skyline.github.com/${login}/${year}",
+  "ready": "[...document.querySelectorAll('span')].map(span => span.innerText).includes('Share on Twitter')",
+  "wait": 1,
+  "hide": "button, footer, a"
+}
+
+          plugin_skyline_year: 2019
+          plugin_stargazers: yes
+          plugin_stargazers_charts: yes
+          plugin_stargazers_charts_type: chartist
+          plugin_starlists: yes
+          plugin_starlists_limit: 2
+          plugin_starlists_limit_languages: 8
+          plugin_starlists_limit_repositories: 2
+          plugin_starlists_shuffle_repositories: yes
+          plugin_stars: yes
+          plugin_stars_limit: 4
+          plugin_stock: yes
+          plugin_stock_duration: 1d
+          plugin_stock_interval: 5m
+          plugin_tweets: yes
+          plugin_tweets_attachments: yes
+          plugin_tweets_limit: 3
+          plugin_tweets_user: .user.twitter
