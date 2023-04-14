@@ -1,6 +1,8 @@
-[![Readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)](https://github.com/piyushsuthar/github-readme-quotes)
+<p align="center"><h1><b>Hello, Friend.  Welcome To My Github World.</b></h1></p>
 
-<p align="left">Welcome To My Github World!!</p>
+<p align="left"><h2><b>Today's Awesome Quote:</b></h2></p>
+
+[![Readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)](https://github.com/piyushsuthar/github-readme-quotes)
 
 ###
 
@@ -10,7 +12,7 @@
 
 ###
 
-<p align="left">My Current Github Stats:</p>
+<p align="left"><h2><b>My Current Github Stats:</b></h2></p>
 
 ###
 
@@ -22,7 +24,7 @@
 
 ###
 
-<p align="left">Connect With Me:</p>
+<p align="left"><h2><b>Connect With Me:</b></h2></p>
 
 ###
 
@@ -40,7 +42,7 @@
 
 ###
 
-<p align="left">My Tech Stack:</p>
+<p align="left"><h2><b>My Tech Stack:</b></h2></p>
 
 ###
 
@@ -90,7 +92,7 @@
 
 [![trophy](https://github-profile-trophy.vercel.app/?username=pavondunbar)](https://github.com/ryo-ma/github-profile-trophy)
 
-<p align="left">My Recent Tweets:</p>
+<p align="left"><h2><b>My Recent Tweets:</b></h2></p>
 
 [![github-readme-twitter](https://github-readme-twitter.gazf.vercel.app/api?id=pavondunbar&layout=wide)](https://github.com/gazf/github-readme-twitter)
 
