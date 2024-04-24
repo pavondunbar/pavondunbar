@@ -91,8 +91,4 @@
 
 [![trophy](https://github-profile-trophy.vercel.app/?username=pavondunbar)](https://github.com/ryo-ma/github-profile-trophy)
 
-<p align="left"><h2><b>My Recent Tweets:</b></h2></p>
-
-[![github-readme-twitter](https://github-readme-twitter.gazf.vercel.app/api?id=pavondunbar&layout=wide)](https://github.com/gazf/github-readme-twitter)
-
 
